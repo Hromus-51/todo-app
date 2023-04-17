@@ -9,7 +9,6 @@ import {
     setTodoList, TodoState, setNewList
 } from '../../redux/todoSlice/slice';
 
-
 const TodoBody = () => {
     const dispatch = useDispatch();
     const todoList = useSelector(selectTodoList);
