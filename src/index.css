@@ -1,0 +1,73 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    /* Typography */
+    --family-ss: 'Josefin Sans', sans-serif;
+
+    /* Font size - heading */
+    --fs-hl: 40px;
+    --lh-hl: 40px;
+
+    /* Font size - body */
+    --fs-bm: 18px;
+    --lh-bm: 18px;
+
+    --fs-bs: 14px;
+    --lh-bs: 14px;
+
+    /* Font size - body-mobile */
+    --fs-bmm: 12px;
+    --lh-bmm: 12px;
+
+    /* Font weight */
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    /* Colors */
+    --title: #FFFFFF;
+    --active: #3A7CFD;
+    --check-bg-hover: linear-gradient(135deg, #55DDFF 0%, #C058F3 100%);
+
+    /* Radius */
+    --bdrr: 5px;
+}
+
+/* Dark-theme */
+body[data-theme='dark'] {
+    --color-text: #C8CBE7;
+    --color-text-secondary: #5B5E7E;
+    --color-text-completed: #4D5067;
+    --color-text-hover: #E3E4F1;
+    --color-text-placeholder: #767992;
+    --colors-bg: #171823;
+    --colors-bg-todo: #25273D;
+    --color-line: #393A4B;
+
+    --shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+    --bg-img: url('./assets/images/bg-desktop-dark.jpg');
+    --bg-img-m: url('./assets/images/bg-mobile-dark.jpg');
+}
+
+/* Light-theme */
+body[data-theme='light'] {
+    --color-text: #494C6B;
+    --color-text-secondary: #9495A5;
+    --color-text-completed: #D1D2DA;
+    --color-text-hover: #494C6B;
+    --color-text-placeholder: #9495A5;
+    --colors-bg: #F2F2F2;
+    --colors-bg-todo: #FFFFFF;
+    --color-line: #E3E4F1;
+
+    --shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+    --bg-img: url('./assets/images/bg-desktop-light.jpg');
+    --bg-img-m: url('./assets/images/bg-desktop-light.jpg');
+}
+
+body {
+    font-family: var(--family-ss);
+    color: var(--color-text);
+    font-weight: var(--fw-regular);
+    background-color: var(--colors-bg);
+}
