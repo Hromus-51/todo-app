@@ -13,10 +13,10 @@ const TodoBody = () => {
     const dispatch = useDispatch();
     const todoList = useSelector(selectTodoList);
     const sort = useSelector(selectSortItem);
-    const sortedList = todoList.filter(obj => obj.status === sort || sort === 'All');
+    const sortedList = todoList.filter(obj => obj.status === sort || sort === 'all');
 
     const handleOrder = (newList: TodoState["todoList"]) => {
-        sort === 'All' ?
+        sort === 'all' ?
             dispatch(setTodoList(newList)) :
             dispatch(setNewList({ newList, sort }))
     }
