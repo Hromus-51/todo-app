@@ -26,13 +26,13 @@ const List: React.FC<ListProps> = ({ sortedList, todoList }) => {
 
     const handleCrossClick = (id: string, length: number) => {
         dispatch(deleteItem(id))
-        length === 1 && dispatch(setSort('All'));
+        length === 1 && dispatch(setSort('all'));
     }
 
     const handleCheckClick = (status: string, id: string) => {
         const length = todoList.filter(obj => obj.status === status).length;
         dispatch(сheckСompleted(id))
-        length === 1 && dispatch(setSort('All'));
+        length === 1 && dispatch(setSort('all'));
     }
 
     return (
@@ -50,17 +50,17 @@ const List: React.FC<ListProps> = ({ sortedList, todoList }) => {
                     <LiContent>
                         <Check
                             onClick={() => { handleCheckClick(item.status, item.id) }}
-                            bg={item.status === 'Completed' ? '--check-bg-hover' : '--color-line'}
+                            bg={item.status === 'completed' ? '--check-bg-hover' : '--color-line'}
                         >
                             <CheckIcon src={checkIcon} alt="icon-check" />
                             <CheckCircle
-                                visible={item.status === 'Completed' ? '0' : '1'}
+                                visible={item.status === 'completed' ? '0' : '1'}
                             />
                         </Check>
 
                         <Content
-                            decoration={item.status === 'Completed' ? 'line-through' : 'none'}
-                            color={item.status === 'Completed' ? '--color-text-completed' : 'inherit'}
+                            decoration={item.status === 'completed' ? 'line-through' : 'none'}
+                            color={item.status === 'completed' ? '--color-text-completed' : 'inherit'}
                         >
                             {item.name}
                         </Content>
