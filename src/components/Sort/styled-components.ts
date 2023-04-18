@@ -10,10 +10,13 @@ export const SortItem = styled.button<{
     active: string,
     hover: string,
 }>`
+    &:first-letter {
+        text-transform: uppercase;
+    }
     color: var(${props => props.active});
-    cursor: pointer;
     font-weight: var(--fw-bold);
 
+    cursor: pointer;
     transition: color 0.15s ease 0s;
 
     &:hover {
