@@ -24,7 +24,7 @@ const TodoInput = () => {
             dispatch(addItem({
                 id: uuidv4(),
                 name: inputValue.trim(),
-                status: 'Active'
+                status: 'active'
             }))
 
             dispatch(setInputValue(''))
