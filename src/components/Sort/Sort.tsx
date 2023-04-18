@@ -5,14 +5,14 @@ import { SortEl, SortItem } from './styled-components';
 import { selectSortItem, selectTodoList, setSort } from '../../redux/todoSlice/slice';
 import { getLength } from '../../utils/utils';
 
-const sortItems = ['All', 'Active', 'Completed'];
+const sortItems = ['all', 'active', 'completed'];
 
 const Sort = () => {
     const dispatch = useDispatch();
     const sort = useSelector(selectSortItem)
     const todoList = useSelector(selectTodoList);
-    const active = getLength({ todoList, status: 'Active' });
-    const completed = getLength({ todoList, status: 'Completed' });
+    const active = getLength({ todoList, status: 'active' });
+    const completed = getLength({ todoList, status: 'completed' });
 
     return (
         <SortEl>
