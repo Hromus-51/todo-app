@@ -16,12 +16,12 @@ const TodoFooter = () => {
     const dispatch = useDispatch()
     const todoList = useSelector(selectTodoList);
     const sort = useSelector(selectSortItem);
-    const active = getLength({ todoList, status: 'Active' });
-    const completed = getLength({ todoList, status: 'Completed' });
+    const active = getLength({ todoList, status: 'active' });
+    const completed = getLength({ todoList, status: 'completed' });
 
     const handleClearClick = () => {
         dispatch(clearCompleted());
-        sort === 'Completed' && dispatch(setSort('All'));
+        sort === 'completed' && dispatch(setSort('all'));
     }
 
     return (
