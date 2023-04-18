@@ -19,7 +19,7 @@ interface SortAction {
 
 const initialState: TodoState = {
     inputValue: '',
-    sort: 'All',
+    sort: 'all',
     todoList: [],
 }
 
@@ -44,13 +44,13 @@ const todoSlice = createSlice({
         },
 
         clearCompleted(state) {
-            state.todoList = state.todoList.filter(obj => obj.status !== 'Completed');
+            state.todoList = state.todoList.filter(obj => obj.status !== 'completed');
         },
 
         сheckСompleted(state, action: PayloadAction<string>) {
             const found = state.todoList.find(obj => obj.id === action.payload);
             if (found) {
-                found.status = found.status === 'Active' ? 'Completed' : 'Active';
+                found.status = found.status === 'active' ? 'completed' : 'active';
             }
         },
 
